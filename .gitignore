@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.pytest_cache/
+.mypy_cache/
+
+# Local Streamlit/runtime files
+.streamlit/secrets.toml
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Local outputs
+*.html
+
+# Environment files
+.env
+.env.*
+
+# Keep model/data artifacts tracked only if intentionally required by deployment.
+# Uncomment these if you decide to keep large artifacts out of Git:
+# models/*.pkl
+# data/*.csv
