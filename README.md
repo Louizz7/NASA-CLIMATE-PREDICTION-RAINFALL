@@ -230,6 +230,10 @@ Then open:
 http://localhost:8501
 ```
 
+Alternatively, you can open with the URL:
+
+https://nasa-climate-prediction-rainfall.streamlit.app/
+
 
 Run the Training Script
 
