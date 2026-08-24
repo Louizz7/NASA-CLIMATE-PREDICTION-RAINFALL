@@ -1,4 +1,4 @@
- 🌧️ NASA Rainfall Forecasting System
+ NASA Rainfall Forecasting System
 
 An end-to-end machine learning project for forecasting annual rainfall using climate data from the NASA POWER Climate Risk Indices dataset.
 
@@ -6,7 +6,8 @@ The project covers the complete workflow:
 
 Data preparation → Feature engineering → Time-series train/validation/test split → Model training → Model evaluation → Model selection → Recursive forecasting → Streamlit deployment
 
- 📌 Project Overview
+
+Project Overview
 
 Rainfall variability creates planning challenges for agriculture, water-resource management, infrastructure, and climate-risk assessment.
 
@@ -26,7 +27,7 @@ The trained forecasting system can generate recursive forecasts from 2025 throug
 - Display model information and evaluation metrics
 
 
- 📊 Dataset
+ Dataset
 
 Source: NASA POWER Climate Risk Indices
 
@@ -43,7 +44,7 @@ data/rainfall_training_dataset.csv
 > The application uses the processed training dataset rather than requiring the original raw dataset at runtime.
 
 
- 🤖 Machine Learning Approach
+Machine Learning Approach
 
 Several regression models were evaluated:
 
@@ -71,7 +72,7 @@ The production artifact is stored as:
 models/rainfall_forecasting_model.pkl
 ```
 
- 🔁 Recursive Forecasting
+Recursive Forecasting
 
 The application uses recursive forecasting for future years.
 
@@ -102,7 +103,7 @@ Predict 2030
 This approach ensures that future predictions are generated using the model's own previous predictions rather than incorrectly treating future rainfall as known historical data.
 
 
- 🧠 Feature Engineering
+Feature Engineering
 
 The forecasting engine reconstructs dependent features for every recursive prediction step, including:
 
@@ -124,12 +125,12 @@ The forecasting engine reconstructs dependent features for every recursive predi
 This is particularly important for multi-year forecasting because the engineered features for 2026 depend partly on the predicted 2025 observation.
 
 
- 🖥️ Streamlit Application
+Streamlit Application
 
 The Streamlit application provides:
 
  Home page
-Project overview and forecasting-system description.
+Project overview and forecasting system description.
 
  Forecast controls
 - City selector
@@ -155,7 +156,7 @@ Plotly rainfall trend chart with:
 Forecast predictions can be downloaded as a CSV file.
 
 
- 📁 Project Structure
+Project Structure
 
 NASA-CLIMATE-PREDICTION-RAINFALL/
 │
@@ -179,7 +180,7 @@ NASA-CLIMATE-PREDICTION-RAINFALL/
 If you want the original NASA CSV included in GitHub, it can be placed in `data/`; however, it is not required by the deployed application if `rainfall_training_dataset.csv` is already included.
 
 
- ⚙️ Installation
+Installation
 
  1. Clone the repository
 
@@ -209,7 +210,7 @@ python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
- ▶️ Run the Streamlit Application
+Run the Streamlit Application
 
 Do not run the application with:
 
@@ -229,9 +230,8 @@ Then open:
 http://localhost:8501
 ```
 
----
 
- 🧪 Run the Training Script
+Run the Training Script
 
 The training script is:
 
@@ -266,7 +266,7 @@ and the processed dataset is written to:
 data/rainfall_training_dataset.csv
 ```
 
- 📦 Production Artifacts
+Production Artifacts
 
 The Streamlit application depends on the following artifacts:
 
@@ -282,7 +282,7 @@ The Streamlit application depends on the following artifacts:
 Keep these files synchronized with the version of the training script that created them.
 
 
- ⚠️ Important Forecasting Consideration
+Important Forecasting Consideration
 
 Recursive forecasting becomes increasingly dependent on previous predictions as the forecast horizon increases.
 
@@ -298,7 +298,8 @@ Therefore, uncertainty generally increases as the forecast horizon becomes longe
 
 The 2025 forecast is expected to be more directly informed by observed historical data than the 2030 forecast.
 
- 📈 Evaluation
+
+Evaluation
 
 The training workflow evaluates the final model using:
 
@@ -311,7 +312,8 @@ MAPE
 
 The exact final metrics should be taken from the output of the final training run rather than manually hard-coded into the application.
 
- 🛠️ Technologies
+
+Technologies
 
 - Python
 - Pandas
@@ -325,7 +327,8 @@ The exact final metrics should be taken from the output of the final training ru
 - Plotly
 - Streamlit
 
- 🚀 Deployment
+
+Deployment
 
 The application is designed to be deployable as a Streamlit application.
 
@@ -337,6 +340,7 @@ Before deployment, verify that:
 - `data/rainfall_training_dataset.csv` exists
 - `requirements.txt` installs successfully
 - the app runs with `python -m streamlit run app.py`
+  
 
  👤 Author
 
@@ -344,7 +348,7 @@ Louis Mbagwu
 
 Data Science / Machine Learning Project
 
- 📄 Project Status
+Project Status
 
 Status: Production-style portfolio project
 
